@@ -539,21 +539,19 @@
                         </div>
                     </div>
                     <div class="right-contact">
-                        <form action="" class="contact-form">
+                        <form action="#" class="contact-form">
                             <div class="input-control i-c-2">
-                                <input type="text" required placeholder="YOUR NAME" name="username">
-                                <input type="email" required placeholder="YOUR EMAIL">
+                                <input class="name" type="text" required placeholder="YOUR NAME" name="username">
+                                <input class="email" type="email" required placeholder="YOUR EMAIL">
                             </div>
                             <div class="input-control">
-                                <input type="text" required placeholder="ENTER SUBJECT">
+                                <input class="subject" type="text" required placeholder="ENTER SUBJECT">
                             </div>
                             <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
+                                <textarea class="message" type="text"  required cols="15" rows="8" placeholder="Message Here..."></textarea>
                             </div>
                             <div class="submit-btn">
-                                <a href="#" class="main-btn">
-                                    <span class="btn-text" style="padding: 10px 30px;">Submit</span>
-                                </a>
+                                <button class="btn-submit" type="submit">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -585,5 +583,33 @@
         <i class="fas fa-adjust"></i>
     </div>
     <script src="app.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+    <script>
+        const form = document.querySelector('.contact-form');
+        function sendMsg(e) {
+            e.preventDefault();
+
+            const name = document.querySelector('.name'),
+                email = document.querySelector('.email'),
+                subject = document.querySelector('.subject'),
+                message = document.querySelector('.message');
+        
+                Email.send({
+                    SecureToken : " cf03ae4b-4bb4-4e03-b828-f2b2c4149d11",
+                    To : 'ac.myportfolio.np@gmail.com',
+                    From : email.value,
+                    Subject : subject.value,
+                    Body : message.value
+                    }).then(
+                      message => alert("Your message has been sent as " + " '" +subject.value+"' ")
+                );    
+        }
+
+        form.addEventListener('submit', sendMsg);
+    </script>
+
 </body>
 </html>
