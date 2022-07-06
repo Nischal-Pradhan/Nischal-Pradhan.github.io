@@ -136,10 +136,6 @@ audio::-webkit-media-controls-panel {
   transform: translateY(-50%);
 }
 
-.controls .control-music {
-  display: flex;
-}
-
 .controls .control {
   padding: 1rem;
   cursor: pointer;
