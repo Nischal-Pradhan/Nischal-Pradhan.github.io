@@ -5,6 +5,11 @@
   list-style: none;
 }
 
+::selection {
+  background-color: var(--color-secondary); /*Highlight Color*/
+  color: #fff; /*Text Color*/
+}
+
 /* ------- scrollbar -css -------*/
 ::-webkit-scrollbar {
   width: 15px;
@@ -68,7 +73,7 @@
 
 body {
   background-color: var(--color-primary);
-  font-family: "Poppins", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.1rem;
   color: var(--color-white);
   transition: all 0.4s ease-in-out;
