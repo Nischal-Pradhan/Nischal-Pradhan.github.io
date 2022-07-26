@@ -21,7 +21,7 @@
 /* Handle */
 /* scrollbar for dark mode */
 ::-webkit-scrollbar-thumb {
-  background: #08457e; 
+  background: var(--color-secondary); 
   border-radius: 150px;
 }
 /* Handle on hover */
@@ -33,7 +33,7 @@
   box-shadow: inset 0 0 2px #e23e3ec9;
 }
 .light-mode::-webkit-scrollbar-thumb  {
-  background: #f56666; 
+  background: var(--color-secondary); 
   border-radius: 10px;
 }
 .light-mode::-webkit-scrollbar-thumb:hover {
