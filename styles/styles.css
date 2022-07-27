@@ -1112,4 +1112,49 @@ audio::-webkit-media-controls-panel {
   }
 }
 
+
+
+.hover-here {
+  position: relative;
+  display: inline-block; 
+  color: var(--color-grey-2); 
+}
+
+.hover-here .hover-here-title {
+  visibility: hidden;
+  width: 100px;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 100%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+  font-size: 16px;
+}
+
+.here-control {
+  color: var(--color-secondary);
+}
+
+.hover-here .hover-here-title::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--color-secondary) transparent;
+}
+
+.hover-here:hover .hover-here-title {
+  visibility: visible;
+  opacity: 1;
+}
 /*# sourceMappingURL=styles.css.map */
