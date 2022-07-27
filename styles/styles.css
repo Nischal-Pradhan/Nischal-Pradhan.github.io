@@ -1144,7 +1144,7 @@ audio::-webkit-media-controls-panel {
   color: var(--color-secondary);
 }
 .here-control:hover {
-  border-bottom: 1px solid var(--color-secondary);
+  text-decoration: overline;
 }
 
 .hover-here .hover-here-title::after {
