@@ -1137,7 +1137,7 @@ audio::-webkit-media-controls-panel {
   transition: opacity .4s;
   font-size: 14px;
 }
-.hover-control {
+.i-here {
   color: var(--color-grey-2);
 }
 .here-control {
