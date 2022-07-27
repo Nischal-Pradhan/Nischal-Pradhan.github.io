@@ -1122,7 +1122,7 @@ audio::-webkit-media-controls-panel {
 
 .hover-here .hover-here-title {
   visibility: hidden;
-  width: 100px;
+  width: 80px;
   background-color: var(--color-secondary);
   color: var(--color-white);
   text-align: center;
@@ -1134,10 +1134,12 @@ audio::-webkit-media-controls-panel {
   left: 100%;
   margin-left: -60px;
   opacity: 0;
-  transition: opacity 1s;
-  font-size: 16px;
+  transition: opacity .4s;
+  font-size: 14px;
 }
-
+.hover-control {
+  color: var(--color-grey-2);
+}
 .here-control {
   color: var(--color-secondary);
 }
